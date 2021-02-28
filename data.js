@@ -14,7 +14,6 @@ const displayfood = foods =>{
       const mealInfo = `
       <h2>${mealss.strMeal}</h2>
       <img src="${mealss.strMealThumb}" onclick="foodDetails('${mealss.idMeal}')";> 
-      <h4 onclick="foodDetails('${mealss.idMeal}')";>${mealss.strMeal}</h4>
       `
       CreateDiv.innerHTML = mealInfo;
       TouchDiv.appendChild(CreateDiv);  
