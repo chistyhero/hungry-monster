@@ -1,5 +1,5 @@
 body{
-    background-color:violet;
+    background-color:coral;
 }
 .mealDivClass{
     width: 210px;
@@ -7,7 +7,6 @@ body{
     color: black
     padding: 10px;
 }
-
 #food-show{
     display: grid;
     grid-template-columns: repeat(3, 1fr);

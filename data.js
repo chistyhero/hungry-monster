@@ -3,7 +3,6 @@ document.getElementById('searchButton').addEventListener('click', function(){
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${foodSearchBar}`)
     .then(response=> response.json())
     .then(data=>displayfood(data.meals))
-    
 }) 
 const displayfood = foods =>{
     const TouchDiv = document.getElementById('food-show');
@@ -19,23 +18,18 @@ const displayfood = foods =>{
       TouchDiv.appendChild(CreateDiv);  
   }
 }
-
 const foodDetails = foodName =>{
   const foodSerachBar = document.getElementById('food-show');
   foodSerachBar.style.display= 'none';
   fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${foodName}`)
   .then(res=> res.json())
-  .then(data=>foodsDetailsShowing(data));
-  
+  .then(data=>foodsDetailsShowing(data));  
 }
-
 const foodsDetailsShowing = foodAllDetails =>{
  const foood = foodAllDetails.meals[0];
  const singleFoodsDetails = document.getElementById('single-food-details');
  const createSingleDeteils = document.createElement('div');
-
  createSingleDeteils.className ="Single-post-details";
-
   const singleDetails = `
   <img src = "${foood.strMealThumb}">
   <h2>${foood.strArea}</h2>
@@ -51,9 +45,6 @@ const foodsDetailsShowing = foodAllDetails =>{
     <h4>${foood.strIngredient5}</h4>
     </ul>
   `
-  
   createSingleDeteils.innerHTML =singleDetails;
-
   singleFoodsDetails.appendChild(createSingleDeteils);
-  
 }
