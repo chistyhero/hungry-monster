@@ -1,0 +1,33 @@
+body{
+    background-color:violet;
+}
+.mealDivClass{
+    width: 210px;
+    text-align: center;
+    color: black
+    padding: 10px;
+}
+
+#food-show{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+#food-show img{
+    width: 300px;
+}
+#input-Div{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+#single-food-details{
+    display: block;
+}
+.Single-post-details{
+    text-align: center;
+}
+
+#single-food-details img{
+    width: 300px;
+}
